@@ -1,9 +1,8 @@
-
-
 body{
     background:linear-gradient(rgb(178, 178, 178), rgb(48, 48, 48));
     height: 110vh;
 }
+
 article {
 
     display: flex;
@@ -25,6 +24,7 @@ article {
     font-size: 7vmin;
     
 }
+
 ul {
     list-style: none;
     margin: 0;

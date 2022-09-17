@@ -1,0 +1,157 @@
+
+
+body{
+    background:linear-gradient(rgb(178, 178, 178), rgb(48, 48, 48));
+    height: 110vh;
+}
+article {
+
+    display: flex;
+    justify-content: center;
+}
+   
+#wtc {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    padding: 0 0 0 30px;
+    box-sizing: border-box;
+    color: rgb(77, 77, 77);
+    font-family: 'Audiowide', cursive;
+    font-size: 7vmin;
+    
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+li *,
+li * ::before,
+li * ::after {
+position:absolute;
+box-sizing: border-box;
+transform-origin: center left;
+}
+.watch {  
+   
+    border: 2px solid #c4c4c4;
+    border-radius: 800px;
+    width: 70vmin;
+    height: 70vmin;  
+    background:radial-gradient(#303030,#979797);
+  }
+
+#hourArrow {
+    background-color: #ca0000;
+    width: 18vmin;
+    height: 6px;  
+    top: 50%;
+    left: 50%;
+    transform: rotate(-0.25turn);
+    border-radius: 50%;
+    
+}
+#minuteArrow {
+    background-color: #d50b00;
+    width: 25vmin;
+    height: 3px;  
+    top: 50%;
+    left:50%;
+    transform: rotate(-0.25turn);
+    border-radius: 50%;
+   
+}
+#secondArrow {
+    background-color: #003089;
+    width: 28vmin;
+    height: 3px;  
+    top: 50%;
+    left:50%;
+    transform: rotate(-0.25turn);
+    border-radius: 50%;
+}
+
+#cifers {
+    font-family: 'Audiowide', cursive;
+}
+
+.nums {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    position: absolute;
+    font-family:'Audiowide';
+    color ='#fff';
+    text-align:center;
+    height: 35vmin;
+    width: 4vmin;
+    transform-origin: center bottom;
+    font-size:6vmin;
+    top: 0%;
+    left:47%;
+    color: #dfdfdf; 
+    background-color: transparent;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+
+.n1, 
+.n2,
+.n3,
+.n4,
+.n5,
+.n6,
+.n7,
+.n8,
+.n9,
+.n10,
+.n11,
+.n12
+{  -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+    transition: all .3s;}
+
+.n1:hover, 
+.n2:hover,
+.n3:hover,
+.n4:hover,
+.n5:hover,
+.n6:hover,
+.n7:hover,
+.n8:hover,
+.n9:hover,
+.n10:hover,
+.n11:hover,
+.n12:hover { 
+    cursor: pointer;
+    font-size: 6.5vmin;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.99);}
+
+    .n1:active, 
+    .n2:active,
+    .n3:active,
+    .n4:active,
+    .n5:active,
+    .n6:active,
+    .n7:active,
+    .n8:active,
+    .n9:active,
+    .n10:active,
+    .n11:active,
+    .n12:active { 
+        -webkit-touch-callout: none;
+        /*cursor: pointer;*/
+        font-size: 10vmin;
+        text-shadow: 0 0rem 2rem rgba(0,0,0,.8);}

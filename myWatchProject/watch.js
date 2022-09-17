@@ -1,5 +1,5 @@
 /* initialising watch arrows and time variables */ 
-let timeStart = new Date();
+let timeStart = new Date(); 
 let seconds = timeStart.getSeconds();
 let minutes = timeStart.getMinutes();
 let hours = timeStart.getHours();

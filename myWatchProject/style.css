@@ -65,9 +65,9 @@ transform-origin: center left;
     top: 50%;
     left:50%;
     transform: rotate(-0.25turn);
-    border-radius: 50%;
-   
+    border-radius: 50%; 
 }
+
 #secondArrow {
     background-color: #003089;
     width: 28vmin;

@@ -14,7 +14,7 @@ minEl.style.backgroundColor = `#a80b03`;
 hourEl.style.backgroundColor = `#df0000`;*/
 
 /* Preparing and display cifers */
-  /*  - creating new LI */
+  /* - creating new LI */
  
   let cifersNum;
   let setAfter;

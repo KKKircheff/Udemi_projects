@@ -11,7 +11,11 @@ Implamenting RESTFul capabilities
 Name        / Path          / Type of request         / Purpose
  
 GET         /comment             / GET                     / Displays all coments
+
 POST        /comment/new         / POST                    / Creates new comment
+
 GET         /comment/:id         / GET                     / Displays comment by id
+
 UPDATE      /comment/:id/edit    / PATCH                   / Edit a comment
+
 DELETE      /comment/:id         / DELETE                  / Delete comment

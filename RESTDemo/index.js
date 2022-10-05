@@ -32,11 +32,23 @@ let comments = [
 //********************/
 
 
-app.get('/comment', (req,res) => {
+app.get('/comments', (req,res) => {
     res.render('comments/index', {comments}); 
     // line above renders index.ejs and passes the data as an object to the rendered tepmplate 
 })
+app.get('/comments/new', (req,res) => {
+    res.render('comments/new.ejs'); 
+    // line above renders index.ejs and passes the data as an object to the rendered tepmplate 
+})
 
+app.post('/comments', (req,res) => {
+    const {username, comment} = req.body; // extracts usename and comment from req.body. Only the needed data is requested 
+    comments.push ({username, comment});
+    res.send('IT worked');
+})
+
+
+// First part of the exercise. Not importanrt for the comment exercise 
 app.post('/tacos', (req,res) => {
     const {meat, qty} = req.body;
     res.send (`from: ${meat} tacos, ordered: ${qty} pcs.`);

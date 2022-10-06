@@ -10,8 +10,12 @@
     <h1>Comments</h1>
     <ul>
         <% for (let c of comments) {%>
-        <li><%= c.comment%><b> <%=c.username%></b></li>    
+        <li><%= c.comment%> -<b> <%=c.username%></b>
+        <a href="/comments/<%=c.id%>">details</a>
+        <a href="/comments/<%=c.id%>/edit">edit</a>
+        </li>    
         <% }%>
     </ul>
+    <button onclick="window.location.href='/comments/new'" style="background-color: rgb(67, 67, 67)" >New comment</button>
 </body>
 </html>

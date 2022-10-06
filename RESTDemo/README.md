@@ -19,3 +19,13 @@ GET         /comment/:id         / GET                     / Displays comment by
 UPDATE      /comment/:id/edit    / PATCH                   / Edit a comment
 
 DELETE      /comment/:id         / DELETE                  / Delete comment
+
+
+New functionalities added:
+
+Adding new comment, Edit an existing comment 
+
+Using "uuid" npm package for generating random comments id's
+
+Using "method-override" npm package for adding 'patch' and more methods, as query string to html. By default only GET and POST request are possible. 
+The sending method must be POST while sending the queries

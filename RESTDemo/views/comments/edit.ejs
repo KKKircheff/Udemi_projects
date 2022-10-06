@@ -7,21 +7,17 @@
     <title>New Commenrh1</title>
   </head>
   <body>
-    <h1>Make a new comment</h1>
-    <form action="/comments" method="post">
-      <section>
-        <label for="username">Enter user name: </label>
+    <h1>Edit comment id: <%= comment.id %>  </h1>
+    <h2>Username: <%= comment.username%>  </h2>
+    <form method="post" action="/comments/<%=comment.id%>?_method=PATCH" >
         <br>
-        <input type="text" placeholder="Username" name="username" id="username">
-      </section>
-      <br/>
-      <section>
         <label for="comment">Enter your comment: </label>
         <br>
-        <textarea cols="30" rows="10" name="comment" id="comment" ></textarea>
+        <textarea align="left" cols="30" rows="10" name="comment" id="comment" >          
+        </textarea>
       </section>
       <br>
-      <button style="background-color: rgb(67, 67, 67)"> Add comment</button>
+      <button style="background-color: rgb(67, 67, 67)">Save</button>
     </form>
     <br>
     <button onclick="window.location.href='/comments'" style="background-color: rgb(67, 67, 67)" >Back to comments</button>

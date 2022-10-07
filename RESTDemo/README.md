@@ -1,6 +1,6 @@
 Exercise over parsing information coming through get, post and json data format.
 
-A server listening port 3000 is created using express
+A server, listening port 3000, is created using Express framework.
 Informaton is parsed usin app.use(....)
 data is extracted from the 'req.body'
 

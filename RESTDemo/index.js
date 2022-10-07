@@ -62,10 +62,16 @@ const comment = comments.find(c => c.id == id); // finds the comment by id
 res.render ('comments/show.ejs', {comment});
 })
 
+app.delete('/comments/:id', (req,res) =>{                  // Delete comment form get request
+const {id} = req.params; // extracts id from 'request'
+comments = comments.filter(c => c.id !== id); // creates new object 'comment' withot the id comment (.filter option)
+res.redirect ('/comments');
+})
+
 app.get('/comments/:id/edit', (req,res) =>{
     const {id, username} = req.params; // extracts id from the 'request'
     const comment = comments.find( c => c.id == id); // finds the responding comment and assings the object in varaible 'comment'. This 'comment' is object too 
-    res.render (`comments/edit.ejs`, {comment});
+    res.render ('comments/edit.ejs',{comment});
 }) 
 
 app.patch ('/comments/:id', (req, res) => {

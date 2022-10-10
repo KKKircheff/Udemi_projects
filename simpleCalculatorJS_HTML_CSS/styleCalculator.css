@@ -1,0 +1,241 @@
+*,
+*::after
+*::before {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: inherit;
+}
+@import url(//db.onlinewebfonts.com/c/86203afc717c0d2960e0b34fd4041e95?family=Ticking+Timebomb+BB);
+/*@font-face {
+    font-family: 'Ticking Timebomb BB';
+     src:url('http://www.ecoster.nl/clc/ttb.ttf') format('truetype');  }*/
+
+body {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+    background:linear-gradient(rgb(178, 178, 178), rgb(48, 48, 48));
+    box-sizing: border-box;
+    background-image: linear-gradient(rgb(178, 178, 178,0.8), rgba(17, 17, 17, 0.9)),url(math.jpg);
+    background-size:contain;
+    background-position: center;
+    height: 100vh;
+    
+}
+
+
+
+
+.calculator {
+    font-family: 'Ticking Timebomb BB',cursive;
+    font-weight: 400;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.screen {
+    background-color: rgb(18, 18, 18);
+    color: bisque;
+    border-radius: 6px 6px 6px 6px;
+    border: 1.5px solid bisque;
+    width: 52vmin;
+    padding: 3vmin 3vmin;
+    margin: .6vmin 0vmin 1.4vmin 0vmin;
+    letter-spacing: 1px;
+    font-family: 'Ticking Timebomb BB','Audiowide',cursive;
+    font-weight: 400;
+    font-size: 4vmin;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+}
+#downScreen {
+    animation: ScreenFix .6s ease-out .2s ;
+    animation-fill-mode: backwards;
+    
+}
+#upScreen {
+    margin: 2vmin 0vmin 1.6vmin 0vmin;
+    animation: ScreenFix .6s ease-out .4s ;
+    animation-fill-mode: backwards;
+    
+}
+
+
+.cButton {
+    box-sizing: border-box;
+    background-color: rgb(18, 18, 18);
+    color: bisque;
+    border-radius: 6px 6px 6px 6px;
+    border: 1.5px solid bisque;
+    width: 12.6vmin;
+    padding: 2vmin 2vmin 1.5vmin 2vmin;
+    margin: .9vmin 1vmin .9vmin 1vmin;
+    font-family: 'Ticking Timebomb BB','Audiowide',cursive;
+    text-align: center;
+    font-weight: 400;
+    font-size: 5vmin;  
+    position: relative;
+}
+
+@media screen {
+    .cButton {
+        font-size: 4vmin;  
+        font-weight: 300;
+    }
+}
+
+.row1 .cButton {
+    animation: buttonScale .3s .3s;
+    animation-fill-mode: backwards;
+}
+.row2 .cButton {
+    animation: buttonScale .3s .4s;
+    animation-fill-mode: backwards;
+}
+.row3 .cButton {
+    animation: buttonScale .3s .5s;
+    animation-fill-mode: backwards;
+}
+.row4 .cButton {
+    animation: buttonScale .3s .6s;
+    animation-fill-mode: backwards;
+}
+.row5 .cButton {
+    animation: buttonScale .3s .8s;
+    animation-fill-mode: backwards;
+}
+.row6 .cButton {
+    animation: buttonScale .3s 1s;
+    animation-fill-mode: backwards;
+}
+
+
+.row1 {
+    animation: moveRight .6s ease-in-out  ;
+    animation-fill-mode: backwards;
+}
+.row2 {
+    animation: moveLeft .6s ease-in-out .1s ;
+    animation-fill-mode: backwards;
+}
+.row3 {
+    animation: moveRight .6s ease-in-out .2s ;
+    animation-fill-mode: backwards;
+}
+.row4 {
+    animation: moveLeft .6s ease-in-out .3s ;
+    animation-fill-mode: backwards;
+}
+.row5 {
+    animation: moveRight .6s ease-in-out .4s ;
+    animation-fill-mode: backwards;
+}
+.row6 {
+    animation: moveLeft .6s ease-in-out .5s ;
+    animation-fill-mode: backwards;
+}
+
+
+
+@keyframes buttonScale{
+    0% {
+       transform: scale(0.1);
+    }
+    60% {
+        filter: brightness(1);
+    }
+    80% {
+        filter: brightness(4);
+    }
+    100% {
+        transform: scale(1);
+        filter:brightness(1);
+    }
+}
+@keyframes ScreenFix {
+    0% {
+       opacity: 0;
+       transform: scale(2);
+    }
+    30% {
+        opacity: .5;
+        transform: scale(0.5);
+        filter: brightness(1);
+    }
+    60% {
+        filter: brightness(1);
+    }
+
+    80% {opacity: 1;
+        transform: scale(1.2);
+        filter: brightness(4);
+    }
+    100% {opacity: 1;
+        transform: scale(1);
+        filter: brightness(1);
+    }
+}
+@keyframes moveLeft{
+    0% {
+      opacity: 0;
+      transform: translate(-20rem);
+      
+    }
+    80% {
+      opacity: 0.6;
+      transform: translate(2rem);
+      
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0rem);
+    }
+  }
+
+  @keyframes moveRight{
+    0% {
+      opacity: 0;
+      transform: translate(20rem);
+    }
+      
+    80% {
+      opacity: 0.6;
+      transform: translate(-2rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0rem);
+    }
+  }
+  @media (hover:hover) {
+      
+    .cButton:hover, .screen:hover {
+    font-family: 'Ticking Timebomb BB','Audiowide',cursive;
+    font-weight: 400;
+    transform: translateY(-.3vmin);
+    box-shadow: 0 .5vmin 4vmin rgba(255, 228, 196, 0.258);
+  }
+}
+
+.cButton:active, .screen:active {
+    font-family: 'Ticking Timebomb BB','Audiowide',cursive;
+    font-weight: 400;
+    transform: translateY(-.1vmin);
+    box-shadow: 0 .3vmin 1vmin rgba(255, 228, 196, 0.497);
+  }
+
+@media screen {
+    .cButton:active, .screen:active {
+        font-family: 'Ticking Timebomb BB','Audiowide',cursive;
+        font-weight: 400;
+        transform: translateY(-.3vmin);
+        box-shadow: 0 .3vmin 1vmin rgba(255, 228, 196, 0.831);
+      }
+}
+

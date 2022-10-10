@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="//db.onlinewebfonts.com/c/86203afc717c0d2960e0b34fd4041e95?family=Ticking+Timebomb+BB"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styleCalculator.css" />
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <audio id="clickAudio">
+      <source src="click3.wav" type="audio/wav"></source>
+    </audio>
+    
+    <audio id="clickAudioEQ">
+      <source src="click5.mp3" type="audio/wav"></source>
+    </audio>
+    
+    <section class="mainDisplay">
+      <div class="calculator">
+        <div class="screen" id="upScreen">
+          <div class="memStat">Mem</div>
+          <div id="hist">0</div>
+        </div>
+
+        <div class="screen" id="downScreen">
+          <div class="operand"></div>
+          <div class="calc">0</div>
+        </div>
+
+        <div class="row1">
+          <button class="cButton" id="m+" onclick="operation('mPlus')">
+            M+
+          </button>
+          <button class="cButton" id="m-" onclick="operation('mMinus')">
+            M-
+          </button>
+          <button class="cButton" id="mr" onclick="operation('mr')">MR</button>
+          <button class="cButton" id="del" onclick="operation('del')">
+            DEL
+          </button>
+        </div>
+        <div class="row2">
+          <button class="cButton" id="ce" onclick="operation('ce')">CE</button>
+          <button class="cButton" id="c" onclick="operation('clr')">C</button>
+          <button class="cButton" id="mc" onclick="operation('mc')">MC</button>
+          <button class="cButton " id="bdiv" onclick="operation('dvd')">
+            /
+          </button>
+        </div>
+        <div class="row3">
+          <button class="cButton" id="b7" onclick="numEnter(7)">7</button>
+          <button class="cButton" id="b8" onclick="numEnter(8)">8</button>
+          <button class="cButton" id="b9" onclick="numEnter(9)">9</button>
+          <button class="cButton" id="mul" onclick="operation('mul')">X</button>
+        </div>
+        <div class="row4">
+          <button class="cButton" id="b4" onclick="numEnter(4)">4</button>
+          <button class="cButton" id="b5" onclick="numEnter(5)">5</button>
+          <button class="cButton" id="b6" onclick="numEnter(6)">6</button>
+          <button class="cButton" id="bminus" onclick="operation('minus')">
+            -
+          </button>
+        </div>
+        <div class="row5">
+          <button class="cButton" id="b1" onclick="numEnter(1)">1</button>
+          <button class="cButton" id="b2" onclick="numEnter(2)">2</button>
+          <button class="cButton" id="b3" onclick="numEnter(3)">3</button>
+          <button class="cButton" id="b+" onclick="operation('plus')">+</button>
+        </div>
+        <div class="row6">
+          <button class="cButton" id="percent" onclick="operation('percent')">
+            %
+          </button>
+          <button class="cButton" id="b0" onclick="numEnter(0)">O</button>
+          <button class="cButton" id="decPoint" onclick="numEnter('decPoint')">
+            .
+          </button>
+          <button class="cButton" id="equal" onclick="operation('eql')">
+            =
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="claculator.js"></script>
+   
+  </body>
+</html>
